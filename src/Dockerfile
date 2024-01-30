@@ -1,2 +1,3 @@
 FROM php:apache
-COPY *.php /var/www/html/
+RUN docker-php-ext-install mysqli
+VOLUME /var/www/html/
