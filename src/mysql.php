@@ -1,6 +1,6 @@
 <?php
 // Datenbankverbindung herstellen
-$servername = "localhost";
+$servername = "192.168.155.57";
 $username = "user";
 $password = "geheim";
 $dbname = "verkauf";
@@ -18,10 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Daten aus dem Formular abrufen
     $name = $_POST["name"];
     $adresse = $_POST["adresse"];
-    
+
     // SQL-Abfrage zum Einfügen der Daten in die Tabelle "Kunden"
     $sql = "INSERT INTO kunden (name, adresse) VALUES ('$name', '$adresse')";
-    
+
     if ($conn->query($sql) === TRUE) {
         echo "Eintrag erfolgreich hinzugefügt.";
     } else {
@@ -54,4 +54,3 @@ $conn->close();
     <input type="text" id="adresse" name="adresse"><br>
     <input type="submit" value="Submit">
 </form>
-
