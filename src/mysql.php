@@ -1,6 +1,6 @@
 <?php
 // Datenbankverbindung herstellen
-$servername = "localhost";
+$servername = "sql";
 $username = "tobias";
 $password = "geheim";
 $dbname = "verkauf";
