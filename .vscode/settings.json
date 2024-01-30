@@ -1,0 +1,11 @@
+{
+    "editor.fontSize": 14,
+    "workbench.iconTheme": "vs-seti",
+    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    "workbench.colorTheme": "Monokai",
+    "editor.mouseWheelZoom": true,
+    "powershell.powerShellAdditionalExePaths": {
+        "linux": "/usr/local/bin/pwsh"
+    }
+    
+}

@@ -11,7 +11,5 @@
     <p>
         <?php echo "Hallo PHP kro" ?>
     </p>
-    <a href="mysql.php">mysql.php</a>
-    <a href="environment.php">environment.php</a>
 </body>
 </html>
