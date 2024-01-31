@@ -27,11 +27,11 @@ jobs:
         with:
           context: ./
           push: true
-          tags: tuttas/dockerschulungphp:latest
+          tags: mzili/dockerschulungphp:latest
       -
         name: Build and push
         uses: docker/build-push-action@v4
         with:
           context: ./mysql/
           push: true
-          tags: tuttas/dockerschulungmysql:latest
+          tags: mzili/dockerschulungmysql:latest
