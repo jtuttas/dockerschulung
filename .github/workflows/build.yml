@@ -25,13 +25,13 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: ./
+          context: ./src/
           push: true
-          tags: tuttas/dockerschulungphp:latest
+          tags: tobiaskroeger/dockerschulungphp:latest
       -
         name: Build and push
         uses: docker/build-push-action@v4
         with:
           context: ./mysql/
           push: true
-          tags: tuttas/dockerschulungmysql:latest
+          tags: tobiaskroeger/dockerschulungmysql:latest
