@@ -6,17 +6,30 @@ services:
       context: ./mysql
       dockerfile: Dockerfile
     container_name: mysql-container
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-u", "root", "-p geheim"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    volumes:
+      - C:\Users\Tobias\DockerData\mysql:/var/lib/mysql
     networks:
-      - mynetwork
+      - kronet
 
   php-apache:
     build:
-      context: .
+      context: ./src
       dockerfile: Dockerfile
+    container_name: web-container
+    volumes:
+      - C:\Users\Tobias\DockerData\html:/var/www/html
     ports:
       - 80:80
+    depends_on:
+      mysql: 
+        condition: service_healthy 
     networks:
-      - mynetwork
+      - kronet
 
 networks:
-  mynetwork:
+  kronet:
